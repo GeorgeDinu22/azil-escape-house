@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/camere.css">
+
+    <script defer src="/camere.js"></script>
+    <script defer src="https://kit.fontawesome.com/e313640c27.js" crossorigin="anonymous"></script>
+
+    <meta property="og:title" content="Azil Escape House" />
+    <meta property="og:description" content="  Cea mai înfricoșătoare și cea mai mare casă a groazei AZIL Escape House cu actori LIVE!" />    
+    <meta property="og:image" itemprop="image" content="https://georgedinu22.github.io/Azil-Escape-House/og-path.jpg"/>
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1063">
+    <meta property="og:image:height" content="598">
+    <meta property="og:url" content="https://georgedinu22.github.io/Azil-Escape-House/"/>
+    <meta property="og:type" content="website"/>
+
+    <title>Azil Escape House</title>
+</head>
+
+<header>
+    <div class="logo">
+            <a href="index.html">
+                 <img src="/logo.webp" alt="">
+            </a>
+    </div>
+
+    <div class="box">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="dropdown-nav">
+        <a href="/index.html">Acasa</a>
+        <a href="">Preturi</a>
+        <a href="">Despre Noi</a>
+        <a href="">Contact</a>
+    </div>
+</header>
+<body>
+    <section class="heroSection">
+        <h1>COMA</h1>
+        <img src="/images/coma.webp">
+
+    </section>
+    <section class="detaliiCamera">
+        
+        <h4>Povestea Camerei</h4>
+
+        <div class="descriereCamera">
+            Azil House te provoacă să pășești într-un azil de psihiatrie abandonat, unde umbrele trecutului încă persistă. Înconjurat de ecouri și experimente uitate, ai la dispoziție 60 de minute să dezlegi misterele și să găsești calea de scăpare.
+            <br> <br>
+            Atmosfera apăsătoare și detaliile înfricoșătoare îți vor pune curajul la încercare. În fiecare cameră, vei descoperi indicii criptice, capcane psihologice și scenarii care îți vor testa mintea și spiritul de echipă. Nu ești singur, actorii live, efectele speciale și decorurile hiperrealiste transformă această experiență într-un thriller psihologic pe care nu-l vei uita curând.
+            <br> <br>
+            Ești gata să înfrunți necunoscutul și să dovedești că poți ieși întreg din Azil?
+        </div>
+
+  
+        <h4>Caracteristicile Camerei</h4>
+
+        <div class="caracteristiciCamera">
+            <div>
+
+                <i class="fa-solid fa-lock-open"></i> 
+                Dificultate <br>
+                4.5/10
+            </div>
+            <div>
+                <i class="fa-solid fa-clock"></i>
+                60'
+            </div>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                2-6
+            </div>
+            <div>
+                <i class="fa-solid fa-layer-group"></i>
+                2 Nivele
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bodyPreturi">
+        <h4>Preturi</h4>
+        <div class="contentPreturi">
+            <div class="cardPret">
+                <p class="orar">Luni - Joi</p>
+                <div class="dots"></div>
+                <p class="pret">100 RON/pers</p>
+            </div>
+
+            <div class="cardPret">
+                <p class="orar">Vineri - Duminica</p>
+                <div class="dots"></div>
+                <p class="pret">110 RON/pers</p>
+            </div>
+
+            <div class="cardPret">
+                <p class="orar">2 Persoane</p>
+                <div class="dots"></div>
+                <p class="pret">150 RON/pers</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="bodyVideo">
+     
+        <div class="containerVideo">
+            <video src="/video.mp4" playsinline muted autoplay loop>
+            </video>
+            <a href="">Rezerva Acum</a>
+        </div>
+        
+    </section>
+
+    <section class="body-maps">
+        <div class="iframe" id="map"></div>
+        <div class="redirect">
+            <span class="waze">
+                <a href="https://waze.com/ul?ll=44.51458771341284,26.01606392874542&navigate=yes" target="_blank">
+                    <i class="fa-solid fa-route"></i>
+                  Navighează cu <p>Waze</p>
+                </a>
+              </span>
+          
+              <span class="google-maps">
+                <a href="https://maps.app.goo.gl/g6qquhhWJjCLFfzK7" target="_blank">
+                    <i class="fa-solid fa-route"></i>
+                  Navighează cu <p>Google Maps</p>
+                </a>
+              </span>
+        </div>
+    </section>
+    <script>
+
+        function initMap() {
+            const locatieEscapeHouse = { lat: 44.51458771341284, lng: 26.01606392874542 };
+      
+            const map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: locatieEscapeHouse,
+              disableDefaultUI: true,
+              styles: [
+                { elementType: "geometry", stylers: [{ color: "#212121" }] },
+                { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] },
+                {
+                  featureType: "administrative",
+                  elementType: "geometry",
+                  stylers: [{ color: "#757575" }]
+                },
+                {
+                  featureType: "poi",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#757575" }]
+                },
+                {
+                  featureType: "poi.park",
+                  elementType: "geometry",
+                  stylers: [{ color: "#181818" }]
+                },
+                {
+                  featureType: "poi.park",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#616161" }]
+                },
+                {
+                  featureType: "poi.park",
+                  elementType: "labels.text.stroke",
+                  stylers: [{ color: "#1b1b1b" }]
+                },
+                {
+                  featureType: "road",
+                  elementType: "geometry.fill",
+                  stylers: [{ color: "#2c2c2c" }]
+                },
+                {
+                  featureType: "road",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#8a8a8a" }]
+                },
+                {
+                  featureType: "road.arterial",
+                  elementType: "geometry",
+                  stylers: [{ color: "#373737" }]
+                },
+                {
+                  featureType: "road.highway",
+                  elementType: "geometry",
+                  stylers: [{ color: "#3c3c3c" }]
+                },
+                {
+                  featureType: "road.highway.controlled_access",
+                  elementType: "geometry",
+                  stylers: [{ color: "#4e4e4e" }]
+                },
+                {
+                  featureType: "road.local",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#616161" }]
+                },
+                {
+                  featureType: "transit",
+                  elementType: "geometry",
+                  stylers: [{ color: "#2f2f2f" }]
+                },
+                {
+                  featureType: "transit.station",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#757575" }]
+                },
+                {
+                  featureType: "water",
+                  elementType: "geometry",
+                  stylers: [{ color: "#000000" }]
+                },
+                {
+                  featureType: "water",
+                  elementType: "labels.text.fill",
+                  stylers: [{ color: "#3d3d3d" }]
+                }
+              ]
+            });
+      
+            const infoWindow = new google.maps.InfoWindow({
+              content: "<h3>Azil Escape House</h3><p>Locație: Șoseaua București - Târgoviște 93, București 003467</p>"
+            });
+      
+            new google.maps.Marker({
+              position: locatieEscapeHouse,
+              map,
+              title: "Azil Escape House",
+              icon: {
+                  url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='-4 0 36 36'><path d='M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z' fill='black' stroke='black' stroke-width='2' /><circle id='Oval' fill='%23d42825' fill-rule='nonzero' cx='14' cy='14' r='7' stroke='black' stroke-width='2' /></svg>",
+                  scaledSize: new google.maps.Size(38, 48),  
+                  anchor: new google.maps.Point(15, 30), 
+              }
+            });
+          }
+        </script>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9w_vLUYB0XBVGZfjxgWFRG0cYiI_A8Rs&callback=initMap">
+    </script>
+
+    <footer>
+        <div class="container-title">
+            <h4>Azil Escape House</h4>
+            <div class="footer-social-media">
+           
+                <a id="facebook" href="https://www.facebook.com/azilescapehousero?locale=ro_RO" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a id="tiktok" href="https://www.tiktok.com/@azilescapehouse" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            
+                <a id="instagram" href="https://www.instagram.com/azilescapehousero/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        
+        <h5>Contact</h5>
+       
+        <div class="footer-contact">
+            <a href="tel:0735455646">
+                <i class="fa-solid fa-phone"></i>
+                +40 735 455 646
+            </a>
+            <a href="mailto:">
+                <i class="fa-solid fa-envelope"></i>
+               contact@azilescaperoom.ro
+            </a>
+            <a href="https://wa.me/40735455646">
+                <i class="fa-brands fa-whatsapp"></i>
+                +40 735 455 646
+            </a>
+        </div>
+
+        <div class="autor">
+            ©Azil Escape House | Toate Drepturile Rezervate - Created By Dinu George
+        </div>
+      </footer>
+
+</body>
+</html>
