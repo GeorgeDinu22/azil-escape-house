@@ -36,15 +36,13 @@
         const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     
         // Preluăm parametrul "produs" din URL
-        const params = new URLSearchParams(window.location.search);
-        const produs = params.get("produs");
     
         // Setăm fișierul corect
         if (isiOS) {
             modelViewer.setAttribute('src', '');
-            modelViewer.setAttribute('ios-src', `https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/${produs}.usdz`);
+            modelViewer.setAttribute('ios-src', 'https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.usdz');
         } else {
-            modelViewer.setAttribute('src', `https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/${produs}.glb`);
+            modelViewer.setAttribute('src', 'https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.glb');
             modelViewer.setAttribute('ios-src', '');
         }
     
