@@ -12,47 +12,21 @@
     <span>Mombu</span> By Infinity
   </h1>
   <img src="terasa.png">
-  <model-viewer id="model3D"
-  alt="Astronaut"
+  
+ <model-viewer id="model3D"
+  alt="Platou"
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
   disable-ar-buttons
-  auto-rotate>
-
+  auto-rotate
+  src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.glb"
+  ios-src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.usdz">
 </model-viewer>
 
 <div id="info">
     Apasă pe cub pentru a vedea produsul în 3D!
 </div>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const modelViewer = document.getElementById('model3D');
-        const btn = document.getElementById('ar-btn');
-    
-        // Detectăm iOS
-        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    
-        // Preluăm parametrul "produs" din URL
-    
-        // Setăm fișierul corect
-        if (isiOS) {
-            modelViewer.setAttribute('src', '');
-            modelViewer.setAttribute('ios-src', 'https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.usdz');
-        } else {
-            modelViewer.setAttribute('src', 'https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.glb');
-            modelViewer.setAttribute('ios-src', '');
-        }
-    
-   
-
-});
-</script>
-
-
-
 
 </body>
 </html>
