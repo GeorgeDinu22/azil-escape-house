@@ -5,21 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test Model 3D</title>
   <link rel="stylesheet" href="model3d.css">
-  <!-- Import model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <h4>Apasa pe cubul din dreapta jos pentru a vedea produsul in fata ta!</h4>
+  <h1>
+    <span>Mombu</span> By Infinity
+  </h1>
   <img src="terasa.png">
-  <model-viewer id="model3D" 
-  src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.glb"
-  ios-src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.usdz"
+  <model-viewer id="model3D"
   alt="Astronaut"
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
+  disable-ar-buttons
   auto-rotate>
+
 </model-viewer>
+
+<div id="info">
+    Apasă pe cub pentru a vedea produsul în 3D!
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modelViewer = document.getElementById('model3D');
+        const btn = document.getElementById('ar-btn');
+    
+        // Detectăm iOS
+        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+        // Preluăm parametrul "produs" din URL
+        const params = new URLSearchParams(window.location.search);
+        const produs = params.get("produs");
+    
+        // Setăm fișierul corect
+        if (isiOS) {
+            modelViewer.setAttribute('src', '');
+            modelViewer.setAttribute('ios-src', `https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/${produs}.usdz`);
+        } else {
+            modelViewer.setAttribute('src', `https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/${produs}.glb`);
+            modelViewer.setAttribute('ios-src', '');
+        }
+    
+   
+
+});
+</script>
+
+
+
 
 </body>
 </html>
