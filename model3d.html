@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test Model 3D</title>
+  <link rel="stylesheet" href="model3d.css">
   <!-- Import model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
-<body style="margin:0; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; background:#111; color:white;">
+<body>
   <h4>Apasa pe cubul din dreapta jos pentru a vedea produsul in fata ta!</h4>
-  <model-viewer 
- src="https://pub-3b080d2d7d6b4467aa9b48d565273ce7.r2.dev/platou.glb"
+  <img src="images/terasa.png">
+  <model-viewer id="model3D" 
+  src="https://pub-3b080d2d7d6b4467aa9b48d565273ce7.r2.dev/platou.glb"
   ios-src="https://pub-3b080d2d7d6b4467aa9b48d565273ce7.r2.dev/platou.usdz"
   alt="Astronaut"
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
-  auto-rotate
-  style="width: 80vw; height: 80vh; background:#222;">
+  auto-rotate>
 </model-viewer>
 
 </body>
