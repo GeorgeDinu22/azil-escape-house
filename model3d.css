@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Anton&family=Bebas+Neue&family=Chewy&family=Luckiest+Guy&family=Modern+Antiqua&family=Niconne&family=Nosifer&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif; 
 }
 body{
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 24px;
+    justify-content: space-evenly;
     height: 100dvh;
 }
 img{
@@ -20,15 +22,53 @@ img{
     object-fit: cover;
     filter: brightness(0.7);
 }
-h4{
+h1{
     color: white;
     position: relative;
     z-index: 10;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-style: normal;
 }
+h1 span{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 750;
+    letter-spacing: 1px;
+    color: rgba(208,141,15,255);
+    font-size: 28px;
+}
+h1::before{
+    content: "";
+    width: 110%;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    background-color: rgba(208,141,15,255);
+    z-index: 2;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
 #model3D{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
     border-radius: 12px;
-    height: 70vh;
-    width: 80%;
+    height: 65vh;
+    width: 90%;
+}
+#info{
+    width: 90%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+    z-index: 2;
+    padding: 12px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
 }
