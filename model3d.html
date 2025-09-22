@@ -23,20 +23,11 @@
   src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.glb"
   ios-src="https://pub-94014dc93b564b5f8906017240aa7b6f.r2.dev/platou.usdz">
 </model-viewer>
-<button id="arBtn">Vezi în AR</button>
+  
 <div id="info">
     Apasă pe cub pentru a vedea produsul în 3D!
 </div>
 
-  <script>
-  const modelViewer = document.getElementById('model3D');
-  const btn = document.getElementById('arBtn');
-
-  btn.addEventListener('click', () => {
-    // Triggerează butonul AR nativ din <model-viewer>
-    modelViewer.activateAR();
-  });
-</script>
 
 </body>
 </html>
