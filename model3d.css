@@ -23,7 +23,7 @@ img{
     filter: brightness(0.7);
 }
 h1{
-    color: red;
+    color: white;
     position: relative;
     z-index: 10;
     font-family: "Special Gothic Expanded One", sans-serif;
