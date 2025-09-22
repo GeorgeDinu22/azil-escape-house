@@ -60,9 +60,7 @@ h1::before{
     height: 65vh;
     width: 90%;
 }
-#arBtn{
-    position:relative;
-    z-index:100;
+
 #info{
     width: 90%;
     box-sizing: border-box;
